@@ -1,4 +1,4 @@
-package Exercise_6;
+package Exercise_06;
 
 public class Main {
     // Don't forget to use comments to clear things up if you need them!
