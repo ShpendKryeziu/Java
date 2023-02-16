@@ -65,10 +65,11 @@ public class Main {
              if (item < minNumber) {
                  minNumber = item;
              }
+            if (item > maxNumber) {
+                maxNumber = item;
+            }
         }
-        for (int i = 0; i < items.size(); i++) {
-            maxNumber = Math.max(maxNumber, items.get(i));
-        }
+
             System.out.println("The largest number is " +maxNumber);
             System.out.println("The smallest number is " +minNumber);
     }
@@ -107,11 +108,15 @@ public class Main {
             System.out.println(timesTableCurrentValue);
         }
         // BONUS
-        for (int i = 1; i <= 10; i++) {
-            int currentValue = 8 * i;
-            System.out.println(currentValue);
+        int x = 8;
+        for (
+                int timesTableCurrentValue = x; // <---- Edit this line
+                timesTableCurrentValue <= (x*10); // <---- Edit this line
+                timesTableCurrentValue = timesTableCurrentValue + x // <---- Edit this line
+        ) {
+            System.out.println(timesTableCurrentValue);
         }
-        }
+    }
 
     /**
      * 5: BONUS! This is an optional task, but it is recommended you complete it

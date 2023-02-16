@@ -67,14 +67,10 @@ public abstract class Main {
         String description = "Nice big sandwich";
         int weightInGrams = 500;
         // Call your function
-        stampaIlPranzo();
+        stampaIlPranzo(myLunchPrice, lunchType, description, weightInGrams);
     }
-    static void stampaIlPranzo() {
-        double myLunchPrice = 5.99;
-        String lunchType = "sandwich";
-        String description = "Nice big sandwich";
-        int weightInGrams = 500;
-        System.out.println("The price is " +myLunchPrice + " for a " +lunchType + ". It's a " + description + " that weighs "
+    static void stampaIlPranzo(double lunchPrice, String lunchType, String description, int weightInGrams) {
+        System.out.println("The price of my lunch is " +lunchPrice + " for a " +lunchType + ". It's a " + description + " that weighs "
                 +weightInGrams + " grams");
     }
 }
