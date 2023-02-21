@@ -1,11 +1,10 @@
 package _1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Exercises {
-    private static List<String> studentNames;
-    private static List<Integer> studentAges;
     public static void main(String[] args) {
         exercise2();
         exercise3();
@@ -32,15 +31,15 @@ public class Exercises {
      */
     private static void exercise2() {
         System.out.println("Exercise 2:");
-        studentNames = Arrays.asList("Alice", "Aragon", "Alex");
-        studentAges = Arrays.asList(23, 31, 38);
+        List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
+        List<Integer> studentAges = Arrays.asList(23, 31, 38);
+        List<Student> students = new ArrayList<>();
 
-        Student newStudent = null;
         for (int i = 0; i < studentNames.size(); i++) {
-            newStudent = createNewStudent(studentNames.get(i), studentAges.get(i));
+            Student student = createNewStudent(studentNames.get(i), studentAges.get(i));
+            students.add(student);
         }
     }
-
 
     private static Student createNewStudent(String name, Integer age) {
         Student student = new Student();
@@ -66,13 +65,22 @@ public class Exercises {
         System.out.println("\nExercise 3:");
 
         // Write your code here
-        int sum = 0;
-        double totalNumber = 0;
-        for (int i = 0; i < studentNames.size(); i ++) {
-            sum += studentAges.get(i);
-            totalNumber++;
+        List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
+        List<Integer> studentAges = Arrays.asList(23, 31, 38);
+
+        Course javaCourse = new Course();
+        javaCourse.courseName = "Java";
+        javaCourse.maxStudents = 16;
+        javaCourse.qualityRatingOutOf10 = 8;
+        javaCourse.numberOfLessons = 20;
+        javaCourse.hoursPerLesson = 0.75;
+        javaCourse.students = new ArrayList<>();
+
+        for (int i = 0; i < studentNames.size(); i++) {
+            Student newStudent = createNewStudent(studentNames.get(i), studentAges.get(i));
+            javaCourse.students.add(newStudent);
         }
-        double averageAge = sum / totalNumber;
-        System.out.println("The average age is " + averageAge);
+        System.out.println(javaCourse.students);
+        System.out.println(javaCourse.averageAgeOfStudents());
     }
 }
