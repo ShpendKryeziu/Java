@@ -62,11 +62,11 @@ public class Exercises {
      *    and can be accessed anywhere in this class, but nowhere else.
      *    use SNAKE_CASE naming
      */
-    public static void exercise4() {
+    private static void exercise4() {
+        System.out.println("\nExercise 4:");
         final int MAX_WEEKS = 52;
         final int MAX_DAYS = 7;
         final int MAX_HOURS = 24;
-        System.out.println("\nExercise 4:");
         for (int week = 0; week < MAX_WEEKS; week++) {
             for (int day = 0; day < MAX_DAYS; day++) {
                 for (int hour = 0; hour < MAX_HOURS; hour++) {
