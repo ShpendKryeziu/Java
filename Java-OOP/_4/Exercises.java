@@ -3,6 +3,9 @@ package _4;
 import java.util.Random;
 
 public class Exercises {
+    private static final int MAX_WEEKS = 52;
+    private static final int MAX_DAYS = 7;
+    private static final int MAX_HOURS = 24;
     public static void main(String[] args) {
         exercise1();
         exercise2();
@@ -64,9 +67,6 @@ public class Exercises {
      */
     private static void exercise4() {
         System.out.println("\nExercise 4:");
-        final int MAX_WEEKS = 52;
-        final int MAX_DAYS = 7;
-        final int MAX_HOURS = 24;
         for (int week = 0; week < MAX_WEEKS; week++) {
             for (int day = 0; day < MAX_DAYS; day++) {
                 for (int hour = 0; hour < MAX_HOURS; hour++) {
