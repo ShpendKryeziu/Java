@@ -127,8 +127,9 @@ public class Exercises1 {
         int min = Integer.MAX_VALUE;
         // Your code
         for (Integer number : orderedNumbers) {
-            min = number;
-            if (number <= 1) {break;}
+            if (min > number) {
+                min = number;
+            } else {break;}
         }
 
         if (min != 1) {
