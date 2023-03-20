@@ -24,8 +24,8 @@ public class Exercises {
         // Your code here
         Rectangle quadrato1 = new Rectangle(5.0, 5.0);
         Rectangle rettangolo1 = new Rectangle(6.5, 9.0);
-        Circle cerchio1 = new Circle(4.0, 4.0);
-        Circle cerchio2 = new Circle(2.0, 3.0);
+        Circle cerchio1 = new Circle(4.0);
+        Circle cerchio2 = new Circle(2.5);
         System.out.println(quadrato1.calculateArea());
         System.out.println(cerchio1.calculateArea());
     }

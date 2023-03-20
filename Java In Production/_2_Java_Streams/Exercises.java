@@ -8,10 +8,10 @@ import java.util.stream.IntStream;
 public class Exercises {
 
     public static void main(String[] args) {
-        exercise1(ourNumbers);
-        exercise2(ourNumbers);
+        exercise1();
+        exercise2();
         exercise3();
-        exercise4(ourNumbers);
+        exercise4();
     }
 
     private static List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList(); // Il debugger mi dice che i numeri arrivano al 9, non al 10
@@ -26,7 +26,7 @@ public class Exercises {
      *
      * %
      */
-    private static void exercise1(List<Integer> ourNumbers) {
+    private static void exercise1() {
         System.out.println("\nExercise 1: ");
         // Your code here
         ourNumbers.stream().filter(x -> x%2==0).forEach(x -> System.out.println(x));
@@ -42,7 +42,7 @@ public class Exercises {
      *
      * Print the resulting Set
      */
-    private static void exercise2(List<Integer> ourNumbers) {
+    private static void exercise2() {
         System.out.println("\nExercise 2: ");
         // Your code here
         Set<Integer> oddNumbers = ourNumbers.stream().filter(x -> x%2!=0).collect(Collectors.toSet());
@@ -81,7 +81,7 @@ public class Exercises {
      *
      * Print the resulting Set
      */
-    private static void exercise4(List<Integer> ourNumbers) {
+    private static void exercise4() {
         System.out.println("\nExercise 4: ");
         //Your code here
         Set<Integer> evensDoubled = ourNumbers.stream().filter(x -> x%2==0).map(x -> x*2).collect(Collectors.toSet());
