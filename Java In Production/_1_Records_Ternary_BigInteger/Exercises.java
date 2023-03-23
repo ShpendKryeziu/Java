@@ -2,6 +2,7 @@ package _1_Records_Ternary_BigInteger;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.MathContext;
 
 public class Exercises {
     public static void main(String[] args) {
@@ -64,7 +65,7 @@ public class Exercises {
         BigInteger aBigNumbah = new BigInteger("8946519874651921346781");
         BigDecimal aSmolNumbah = new BigDecimal("0.000001614152618135");
         BigInteger bigDivided = aBigNumbah.divide(new BigInteger("3"));
-        BigDecimal smolDivided = aSmolNumbah.divide(new BigDecimal(Math.PI));
+        BigDecimal smolDivided = aSmolNumbah.divide(new BigDecimal(Math.PI), MathContext.DECIMAL32);
         System.out.println(bigDivided);
         System.out.println(smolDivided);
     }
